@@ -1,0 +1,42 @@
+.modal-header {
+  background: #F6732D;
+  .modal-title {
+    color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+}
+.close {
+  color: white;
+ span {
+  font-size: 24px;
+ }
+}
+.block {
+  margin-bottom: 24px;
+  label {
+    color: #222;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+  }
+}
+.delete {
+  position: absolute;
+  left: 15px;
+  color: #222;
+font-kerning: none;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-decoration-line: underline;
+}
+.btn-filter {
+  border-radius: 8px;
+background: #F6732D;
+color: white;
+}

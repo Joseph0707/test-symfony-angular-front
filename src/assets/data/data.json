@@ -1,0 +1,29 @@
+[
+  {
+    "id": 68,
+    "groupName": "The Beatles",
+    "country": "Royaume-Uni ",
+    "city": "Liverpool",
+    "beginningYears": 1960,
+    "endingYears": 1970,
+    "founders": [
+      {
+        "id": 10,
+        "name": "John Lennon"
+      },
+      {
+        "id": 11,
+        "name": "test2"
+      },
+      {
+        "id": 12,
+        "name": "test1"
+      }
+    ],
+    "members": 4,
+    "musicType": {
+      "type": null
+    },
+    "description": "The Beatles [ðə ˈbiːtəlz] est un quatuor musical britannique originaire de Liverpool, en Angleterre. Le noyau du groupe se forme avec les Quarrymen fondés ..."
+  }
+]

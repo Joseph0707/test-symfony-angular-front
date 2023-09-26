@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg nav-content">
+    <div class="container position-relative">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="/assets/images/logo.png" alt="Logo" height="30">
+          </a>
+          <input type="file" #fInput style="visibility: hidden; position: absolute;" (change)="uploadFile($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
+
+            <button class="right-text btn btn-black" type="file" (click)="fInput.click()" >Upload</button>
+    </div>
+  </nav>

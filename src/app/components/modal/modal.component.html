@@ -1,0 +1,102 @@
+<div class="modal-header">
+  <h4 class="modal-title">Filtre</h4>
+
+  <div
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </div>
+</div>
+<div class="modal-body">
+  <div class="block">
+    <label for=""> Trier par </label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Séletionner...</option>
+    </select>
+  </div>
+
+  <div class="block">
+    <label for="">Intervalle d’année</label>
+    <div class="row">
+      <div class="col-6">
+        <input [(ngModel)]="inputValue" class="form-control" placeholder="0000" />
+      </div>
+      <div class="col-6">
+        <input [(ngModel)]="inputValue" class="form-control" placeholder="0000" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <label for="">Courant musical</label>
+
+    <div class="row">
+      <div class="col-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">Grunge </label>
+      </div>
+      <div class="col-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault"> Non defini </label>
+      </div>
+      <div class="col-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault"> Pop rock </label>
+      </div>
+      <div class="col-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault"> Rock </label>
+      </div>
+      <div class="col-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault"> Trip hop </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <label for="">Origine</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Séletionner...</option>
+    </select>
+  </div>
+  <div class="block">
+    <label for="">Ville</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Séletionner...</option>
+    </select>
+  </div>
+</div>
+<div class="modal-footer">
+  <a class="delete">Tout effacer</a>
+  <button type="button" class="btn btn-filter" (click)="onSubmit()">
+    Appliquer mes filtres
+  </button>
+</div>

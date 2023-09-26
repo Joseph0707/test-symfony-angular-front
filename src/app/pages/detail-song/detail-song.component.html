@@ -1,0 +1,63 @@
+
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+  <a (click)="goBack()" style="cursor: pointer"
+    ><img src="/assets/images/arrow.svg" alt="Logo" height="30" /> Retour</a
+  >
+  <div class="row card-center">
+    <h2 class="text-center">Détail</h2>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-4 position-relative">
+              <img
+                class="image-icon"
+                src="/assets/images/icon.png"
+                alt="icon"
+              />
+            </div>
+            <div class="col-sm-8 pt-4">
+              <h5 class="title-card">{{ dataDetail.groupName }}</h5>
+              <p class="card-text">
+                <span class="sub-text"> <img src="/assets/images/song.svg" alt="Logo" height="16" />{{ dataDetail.currentMusical }} </span
+                ><span class="sub-description"
+                  >. Année debut {{ dataDetail.startYear }}</span
+                >
+                <br />
+                <span class="sub-text">Origine: </span>
+                <span class="sub-description">{{ dataDetail.country }}</span>
+              </p>
+            </div>
+            <div class="card-bod">
+              <h3 class="sub-title">Fondateur</h3>
+              <p class="text-card">
+                {{ dataDetail.founders }}
+              </p>
+
+              <div class="row">
+                <div class="col-6">
+                  <h3 class="sub-title">Année de séparation</h3>
+                  <p class="text-card">
+                    {{ dataDetail.separationYear }}
+                  </p>
+                </div>
+                <div class="col-6">
+                  <h3 class="sub-title">Membres</h3>
+                  <p class="text-card">
+                    {{ dataDetail.members }}
+                  </p>
+                </div>
+              </div>
+              <h3 class="sub-title">Présentation</h3>
+              <p class="text-card">
+                {{ dataDetail.presentation }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
