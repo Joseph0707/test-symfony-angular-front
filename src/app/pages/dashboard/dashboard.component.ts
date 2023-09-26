@@ -37,9 +37,8 @@ navigateTo(id: number) {
 search(text: string, pipe: PipeTransform): Observable<Country[]> {
   return this.countryService.fetchCountries().pipe(
     map(countries => {
-      console.log({countries})
       if (text.trim() === '') {
-        return countries; // Retourne la liste complète des pays si le texte est vide
+        return countries;
       }
       return countries.filter((country: any) => {
         const term = text.toLowerCase();

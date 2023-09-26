@@ -18,7 +18,7 @@ getDetail(id: string): void {
   this.countryService.fetchCountry(id)
     .subscribe({
       next: (data) => {
-        this.dataDetail = data;
+        this.dataDetail = data[0];
       },
       error: (e) => console.error(e)
     });

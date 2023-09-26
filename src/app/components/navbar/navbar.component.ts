@@ -22,8 +22,10 @@ export class NavbarComponent {
 
     let file: File = fileList[0];
 
-    this.upload(file).subscribe((event: any) => {
+    this.upload(file).subscribe(() => {
       this.notifier.notify('success', 'Le fichier a bien été sauvegardé.');
+    }, () => {
+      this.notifier.notify('error', 'Il y a eu un problème.')
     })
   }
 

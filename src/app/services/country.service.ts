@@ -14,9 +14,7 @@ export class CountryService {
   fetchCountries(): Observable<Country[]> {
     return this.http.get<Country[]>(`${environment.URL_BACKEND}bands`);
   }
-  fetchCountry(id: any): Observable<Country> {
-    return this.http.get<any>(`${environment.URL_BACKEND}`).pipe(
-      map((data: any) => data.find((item: any) => parseInt(id) == item.id))
-    );
+  fetchCountry(id: any): Observable<Country[]> {
+    return this.http.get<Country[]>(`${environment.URL_BACKEND}bands/${id}`);
   }
 }
