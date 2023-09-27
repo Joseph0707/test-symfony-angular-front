@@ -1,41 +1,44 @@
-
 <app-navbar></app-navbar>
 
 <div class="container mt-3">
   <form>
     <h2 class="title-search">Liste de musicien ou groupe</h2>
-  <div class="form-group row mb-3">
-    <div class="col-sm-10 position-relative">
-      <img src="/assets/images/search.svg" alt="Logo" height="30" class="search-ico" />
-      <input id="table-filtering-search" class="form-control input-search" type="text" [formControl]="filter" placeholder="Rechercher par nom..." />
-    </div>
-    <div class="col-sm-2">
+    <div class="form-group row mb-3">
+      <div class="col-sm-10 position-relative">
+        <img src="/assets/images/search.svg" alt="Logo" height="30" class="search-ico" />
+        <input id="table-filtering-search" class="form-control input-search" type="text" [formControl]="filter"
+          placeholder="Rechercher par nom..." />
+      </div>
+      <div class="col-sm-2">
 
-      <button (click)="open()" class="btn btn-black"><img src="/assets/images/filter.svg" alt="Logo" height="30" />Filtres</button>    </div>
-  </div>
-</form>
+        <!-- <button (click)="open()" class="btn btn-black"><img src="/assets/images/filter.svg" alt="Logo"
+            height="30" />Filtres</button> -->
+      </div>
+    </div>
+  </form>
   <div class="row mt-5">
-  <div class="col-md-6 col-lg-4 mb-4 col-sm-12" *ngFor="let country of countries$ | async; index as i">
-    <div class="card" (click)="navigateTo(country.id)">
-      <div class="card-body">
-       <div class="row">
-        <div class="col-sm-2 position-relative">
-          <img class="image-icon" src="/assets/images/icon.png" alt="icon">
+    <div class="col-md-6 col-lg-4 mb-4 col-sm-12" *ngFor="let country of countries$ | async; index as i">
+      <div class="card" (click)="navigateTo(country.id)">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-2 position-relative">
+              <img class="image-icon" src="/assets/images/icon.png" alt="icon">
+            </div>
+            <div class="col-sm-10 ps-4">
+              <h5 class="card-title">
+                <ngb-highlight [result]="country.groupName" [term]="filter.value"></ngb-highlight>
+              </h5>
+              <p class="card-text">
+                <span class="sub-title"> <img src="/assets/images/song.svg" alt="Logo" height="16" />{{
+                  country.musicType.type }} </span><span class="sub-description">. Année debut {{ country.beginningYears
+                  }}</span> <br>
+                <span class="sub-title">Origine: </span> <span class="sub-description">{{ country.country }}</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-10 ps-4">
-          <h5 class="card-title">
-            <ngb-highlight [result]="country.groupName" [term]="filter.value"></ngb-highlight>
-          </h5>
-          <p class="card-text">
-            <span class="sub-title"> <img src="/assets/images/song.svg" alt="Logo" height="16" />{{ country.musicType.type }} </span><span class="sub-description">. Année debut {{ country.beginningYears }}</span> <br>
-            <span class="sub-title">Origine: </span> <span class="sub-description">{{ country.country }}</span>
-          </p>
-        </div>
-       </div>
       </div>
     </div>
   </div>
-</div>
 
 </div>
-

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NotifierService } from 'angular-notifier';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -10,7 +11,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private http: HttpClient, private notifier: NotifierService) { }
+  constructor(private http: HttpClient, private notifier: NotifierService, private router: Router) { }
 
   uploadFile(event: any) {
     let fileList: FileList = event.target.files;
@@ -24,6 +25,7 @@ export class NavbarComponent {
 
     this.upload(file).subscribe(() => {
       this.notifier.notify('success', 'Le fichier a bien été sauvegardé.');
+      window.location.reload()
     }, () => {
       this.notifier.notify('error', 'Il y a eu un problème.')
     })
